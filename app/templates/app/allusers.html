@@ -1,0 +1,41 @@
+{% extends 'app/base.html' %}
+<style>
+  body {font-size:50px;}
+</style>
+
+{% block main-content %} 
+ <h1 class='text-center bg-primary py-3 my-3' >List of all Users</h1>
+  <table class="table table-striped" style="color:blue; font-size:16px;">
+   <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Date of Birth</th>
+            <th>Email</th>
+            <th>Mobile</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for d in data %}
+        <tr>
+        <td>{{d.pk}}</td>
+        <td>{{d.Name}}</td>
+        <td>{{d.DOB}}</td>
+        <td>{{d.Email}}</td>
+        <td>{{d.Phone_number}}</td>
+        </tr>
+        {% endfor %}  
+     </tbody>    
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock main-content %}
